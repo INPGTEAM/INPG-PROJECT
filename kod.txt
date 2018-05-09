@@ -1,0 +1,5 @@
+Matrix add_matrices(const Matrix& m1,const Matrix& m2){
+    Matrix sum_mat(m1);
+    std::transform(m1.cbegin(), m1.cend(), m2.cbegin(),sum_mat.begin(),[&](MatVect v1,MatVect v2){return add_vectors(v1,v2);});
+    return sum_mat;
+}
