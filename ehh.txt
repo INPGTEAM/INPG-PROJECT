@@ -1,4 +1,10 @@
 test test test test kurwa test zmien sie do jasnej anielki 
-sprawdzam zmiany 
-jak mam to zassa� do siebie?
-dobra wiem, teraz czas na testy zmian w innych plikach(nie dodanych przeze mnie)//po co ja to w og�le pisz�? 
+WPROWADZAM zmiany //zmiana 1//
+jak mam to zassać do siebie?
+dobra wiem, teraz czas na testy zmian w innych plikach(nie dodanych przeze mnie)//po co ja to w ogóle piszę?
+
+
+testy jednostkowe to  bardzo dobra dokumentacja, warta więcej niż 1000 słów jak RAfaello
+dlatego też wykonujemy je najpierw 
+
+Sprawdzaj Łukasz
