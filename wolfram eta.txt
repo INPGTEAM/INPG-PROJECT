@@ -1,1 +1,1 @@
-http://www.wolframalpha.com/input/?i=(1.3013+(-654.161+d%5E3+%2B+m)+t)%2F(d+(1+%2B+61.5385+d))++,+m%3D0.000051,+d%3D0.00366,+t%3D10.53
+Sprawdzam czy zmiany dzia³aj¹. Sorki za link, umar³ w imiê nauki.
