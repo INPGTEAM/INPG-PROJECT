@@ -1,1 +1,1 @@
-Tutaj mo¿na kalibrowaæ dzia³alnoœæ gita.
+Tutaj mozna kalibrowac dzialalnosc gita.
