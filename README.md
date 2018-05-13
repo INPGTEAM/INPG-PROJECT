@@ -1,2 +1,0 @@
-# INPG-PROJECT
-rpg makers

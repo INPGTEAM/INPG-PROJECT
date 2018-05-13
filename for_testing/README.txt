@@ -1,0 +1,1 @@
+Tutaj mo¿na kalibrowaæ dzia³alnoœæ gita.
