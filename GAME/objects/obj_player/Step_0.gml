@@ -2,9 +2,11 @@
 // geting the input
 
 //FIRST TYPE
+
 var t1 = tilemap_get_at_pixel(tilemap, bbox_left, bbox_bottom+1) & tile_index_mask;
 var t2 = tilemap_get_at_pixel(tilemap, bbox_right, bbox_bottom+1) & tile_index_mask;
-if (t1 !=0 || t2 != 0){
+var t3 = tilemap_get_at_pixel(tilemap, (bbox_right + (bbox_left - bbox_right) / 2), bbox_bottom+1) & tile_index_mask;
+if (t1 !=0 || t2 != 0 || t3 !=0){
 	if (keyboard_check(vk_up)) {
 		v_speed = (-jump_speed);
 	}
@@ -19,16 +21,16 @@ y += vsp;
 if (vsp > 0) { // downowards
 	var t1 = tilemap_get_at_pixel(tilemap, bbox_left, bbox_bottom) & tile_index_mask;
 	var t2 = tilemap_get_at_pixel(tilemap, bbox_right, bbox_bottom) & tile_index_mask;
-	//var t3 = tilemap_get_at_pixel(tilemap, (bbox_right + (bbox_left - bbox_right)) / 2, bbox_bottom) & tile_index_mask;
-	if (t1 != 0 || t2 != 0 ){
+	var t3 = tilemap_get_at_pixel(tilemap, (bbox_right + (bbox_left - bbox_right) / 2), bbox_bottom) & tile_index_mask;
+	if (t1 != 0 || t2 != 0 || t3 != 0 ){
 		y = ((bbox_bottom & ~31)-1) - sprite_bbox_bottom;
 		v_speed = 0;
 	}
 } else { //upwards
 	var t1 = tilemap_get_at_pixel(tilemap, bbox_left, bbox_top) & tile_index_mask;
 	var t2 = tilemap_get_at_pixel(tilemap, bbox_right, bbox_top) & tile_index_mask;
-	//var t3 = tilemap_get_at_pixel(tilemap, (bbox_right + (bbox_left - bbox_right)) / 2, bbox_top) & tile_index_mask;
-	if (t1 != 0 || t2 != 0 ){
+	var t3 = tilemap_get_at_pixel(tilemap, (bbox_right + (bbox_left - bbox_right)/ 2), bbox_top) & tile_index_mask;
+	if (t1 != 0 || t2 != 0 || t3 != 0 ){
 		y = ((bbox_top + 32) & ~31) - sprite_bbox_top;
 		v_speed = 0;
 	}
@@ -39,20 +41,21 @@ x += hsp;
 if (hsp > 0) { //right
 	var t1 = tilemap_get_at_pixel(tilemap, bbox_right, bbox_top) & tile_index_mask;
 	var t2 = tilemap_get_at_pixel(tilemap, bbox_right, bbox_bottom) & tile_index_mask;
-	//var t3 = tilemap_get_at_pixel(tilemap, bbox_right, (bbox_top + (bbox_bottom-bbox_top))/2) & tile_index_mask;
+	var t3 = tilemap_get_at_pixel(tilemap, bbox_right, (bbox_top + (bbox_bottom-bbox_top)/2)) & tile_index_mask;
 	
-	if (t1 != 0 || t2 != 0 ){
+	if (t1 != 0 || t2 != 0  || t3 != 0){
 		x = ((bbox_right & ~31)-1) - sprite_bbox_right;
 	}
 } else { //left
 	var t1 = tilemap_get_at_pixel(tilemap, bbox_left, bbox_top) & tile_index_mask;
 	var t2 = tilemap_get_at_pixel(tilemap, bbox_left, bbox_bottom) & tile_index_mask;
-	//var t3 = tilemap_get_at_pixel(tilemap, bbox_left, (bbox_top + (bbox_bottom-bbox_top))/2) & tile_index_mask;
+	var t3 = tilemap_get_at_pixel(tilemap, bbox_left, (bbox_top + (bbox_bottom-bbox_top)/2)) & tile_index_mask;
 
-	if (t1 != 0 || t2 != 0 ){
+	if (t1 != 0 || t2 != 0 || t3 !=0 ){
 		x = ((bbox_left+ 32) & ~31) - sprite_bbox_left;
 	}
 }
+
 /* SECOND TYPE
 var x_input = (keyboard_check(vk_right) - keyboard_check(vk_left)) * acceleration;
 
