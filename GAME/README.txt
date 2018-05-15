@@ -9,11 +9,11 @@ Nie nalegam, ale zachecam do prowadzenia prywatnego changelogu dotycz¹cego pracy
 
 CHANGELOG
 
-Update 1.0
+Update 1.0 ~Lukasz
 Stworzone zosta³y pliki gry.
 Zaimplementowano maskê kolizyjna. Pozniej napisze jak z niej korzystac.
 Dodano podstawowe funkcje postaci (bieganie/skakanie).
 
-1.1
+1.1 ~Lukasz
 Maska zosta³a zaimplementowana now¹ metod¹. Jest ona bardzie zrozumia³a. £atwiejsza do wykorzystania. 
 Dodano grafikê przedstawiaj¹c¹ jak MNIEJ WIÊCEJ wygl¹da mapa do platformówki oraz jak korzystaæ z maski. (Tam w pokojach kliknijcie sobie widocznoœæ).
