@@ -55,6 +55,14 @@
             }
         },
         {
+            "Key": "1f3c5fea-8d66-4f5c-aeda-4507ddafeb57",
+            "Value": {
+                "id": "d98b7e3c-c45e-492f-82c8-137daa654133",
+                "resourcePath": "sprites\\spr_enemy_triggered\\spr_enemy_triggered.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "2dfb5202-ff3c-46ea-a380-a2c762c345cd",
             "Value": {
                 "id": "cf6e962e-5faf-4aee-998f-a785e51c240c",

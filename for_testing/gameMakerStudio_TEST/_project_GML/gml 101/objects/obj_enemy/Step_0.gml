@@ -6,4 +6,6 @@ if (instance_exists(obj_player))
 
 image_angle = direction;
 
+if(hp<4) sprite_index = spr_enemy_triggered;
+
 if (hp<=0) instance_destroy();

@@ -135,6 +135,22 @@
             }
         },
         {
+            "Key": "80da9125-c623-4bbc-aa8a-02fc1c9f6d15",
+            "Value": {
+                "id": "862a3989-1c35-4749-9a73-2173444819bb",
+                "resourcePath": "objects\\obj_enemy_prototype0\\obj_enemy_prototype0.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "8cd8f02f-ab4b-44de-9a65-7f7a4ed36de3",
+            "Value": {
+                "id": "adb7d778-8e7c-4729-8fa9-db9ecc47e72d",
+                "resourcePath": "sprites\\spr_enemy_prototype0\\spr_enemy_prototype0.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "959bd466-7499-4c50-9f44-a1916eb5a9f1",
             "Value": {
                 "id": "81ae0664-504f-4158-9fca-889261067f57",
@@ -260,6 +276,14 @@
                 "id": "0d5b265f-61cc-41b6-9490-04ba805959a3",
                 "resourcePath": "views\\f8563e2f-62ea-4aff-b494-ae6f0134384f.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "f910922e-9526-4ff5-8732-4d34c3733cbf",
+            "Value": {
+                "id": "d8badb54-dda0-49a9-9c1d-afa24b5361ef",
+                "resourcePath": "sprites\\spr_triggered\\spr_triggered.yy",
+                "resourceType": "GMSprite"
             }
         }
     ],
