@@ -17,3 +17,5 @@ Dodano podstawowe funkcje postaci (bieganie/skakanie).
 1.1 ~Lukasz
 Maska zosta³a zaimplementowana now¹ metod¹. Jest ona bardzie zrozumia³a. £atwiejsza do wykorzystania. 
 Dodano grafikê przedstawiaj¹c¹ jak MNIEJ WIÊCEJ wygl¹da mapa do platformówki oraz jak korzystaæ z maski. (Tam w pokojach kliknijcie sobie widocznoœæ).
+1.2 ~Lukasz
+opis w drodze

@@ -3,55 +3,102 @@
 
 //FIRST TYPE
 
+// jumping
+// for collision mask
 var t1 = tilemap_get_at_pixel(tilemap, bbox_left, bbox_bottom+1) & tile_index_mask;
 var t2 = tilemap_get_at_pixel(tilemap, bbox_right, bbox_bottom+1) & tile_index_mask;
 var t3 = tilemap_get_at_pixel(tilemap, (bbox_right + (bbox_left - bbox_right) / 2), bbox_bottom+1) & tile_index_mask;
 if (t1 !=0 || t2 != 0 || t3 !=0){
 	if (keyboard_check(vk_up)) {
 		v_speed = (-jump_speed);
+		jump_ref = 20
 	}
 }
-
+//for one way tiles
+var t1 = tilemap_get_at_pixel(tilemap2, bbox_left, bbox_bottom+1) & tile_index_mask;
+var t2 = tilemap_get_at_pixel(tilemap2, bbox_right, bbox_bottom+1) & tile_index_mask;
+var t3 = tilemap_get_at_pixel(tilemap2, (bbox_right + (bbox_left - bbox_right) / 2), bbox_bottom+1) & tile_index_mask;
+if (t1 !=0 || t2 != 0 || t3 !=0){
+	if (keyboard_check(vk_up) && jump_ref <=0) {
+		v_speed = (-jump_speed);
+		jump_ref = 20;
+	}
+}
+jump_ref -= 1;
+// geting the input
 var hsp = (keyboard_check(vk_right) - keyboard_check(vk_left)) * _spd;
 var vsp = v_speed;
 v_speed += _gravity;
 
 y += vsp;
-// vertical
-if (vsp > 0) { // downowards
+// VERTICAL
+//collision mask
+if (vsp > 0) { // downowards - collision mask
 	var t1 = tilemap_get_at_pixel(tilemap, bbox_left, bbox_bottom) & tile_index_mask;
 	var t2 = tilemap_get_at_pixel(tilemap, bbox_right, bbox_bottom) & tile_index_mask;
 	var t3 = tilemap_get_at_pixel(tilemap, (bbox_right + (bbox_left - bbox_right) / 2), bbox_bottom) & tile_index_mask;
-	if (t1 != 0 || t2 != 0 || t3 != 0 ){
+	var t4 = tilemap_get_at_pixel(tilemap, (bbox_right + (bbox_left - bbox_right) / 1.5), bbox_bottom) & tile_index_mask;
+	var t5 = tilemap_get_at_pixel(tilemap, (bbox_right + (bbox_left - bbox_right) / 3), bbox_bottom) & tile_index_mask;
+	var t6 = tilemap_get_at_pixel(tilemap, (bbox_right + (bbox_left - bbox_right) / 1.25), bbox_bottom) & tile_index_mask;
+	var t7 = tilemap_get_at_pixel(tilemap, (bbox_right + (bbox_left - bbox_right) / 4), bbox_bottom) & tile_index_mask;
+	if (t1 != 0 || t2 != 0 || t3 != 0 || t4 !=0 || t5 !=0 || t6 != 0 || t7 != 0 ){
 		y = ((bbox_bottom & ~31)-1) - sprite_bbox_bottom;
 		v_speed = 0;
 	}
-} else { //upwards
+} else { //upwards - collision mask
 	var t1 = tilemap_get_at_pixel(tilemap, bbox_left, bbox_top) & tile_index_mask;
 	var t2 = tilemap_get_at_pixel(tilemap, bbox_right, bbox_top) & tile_index_mask;
 	var t3 = tilemap_get_at_pixel(tilemap, (bbox_right + (bbox_left - bbox_right)/ 2), bbox_top) & tile_index_mask;
-	if (t1 != 0 || t2 != 0 || t3 != 0 ){
+	var t4 = tilemap_get_at_pixel(tilemap, (bbox_right + (bbox_left - bbox_right) / 1.5), bbox_bottom) & tile_index_mask;
+	var t5 = tilemap_get_at_pixel(tilemap, (bbox_right + (bbox_left - bbox_right) / 3), bbox_bottom) & tile_index_mask;
+	var t6 = tilemap_get_at_pixel(tilemap, (bbox_right + (bbox_left - bbox_right) / 1.25), bbox_bottom) & tile_index_mask;
+	var t7 = tilemap_get_at_pixel(tilemap, (bbox_right + (bbox_left - bbox_right) / 4), bbox_bottom) & tile_index_mask;
+	if (t1 != 0 || t2 != 0 || t3 != 0 || t4 !=0 || t5 !=0 || t6 != 0 || t7 != 0 ){
 		y = ((bbox_top + 32) & ~31) - sprite_bbox_top;
 		v_speed = 0;
 	}
 }
-
-//horizontal move
+//one way tiles mask
+if(keyboard_check(vk_down)) refresh = 5;
+if (vsp > 0 && refresh <= 0) { // downowards - one way tiles mask
+	var t1 = tilemap_get_at_pixel(tilemap2, bbox_left, bbox_bottom) & tile_index_mask;
+	var t2 = tilemap_get_at_pixel(tilemap2, bbox_right, bbox_bottom) & tile_index_mask;
+	var t3 = tilemap_get_at_pixel(tilemap2, (bbox_right + (bbox_left - bbox_right) / 2), bbox_bottom) & tile_index_mask;
+	var t4 = tilemap_get_at_pixel(tilemap2, (bbox_right + (bbox_left - bbox_right) / 1.5), bbox_bottom) & tile_index_mask;
+	var t5 = tilemap_get_at_pixel(tilemap2, (bbox_right + (bbox_left - bbox_right) / 3), bbox_bottom) & tile_index_mask;
+	var t6 = tilemap_get_at_pixel(tilemap2, (bbox_right + (bbox_left - bbox_right) / 1.25), bbox_bottom) & tile_index_mask;
+	var t7 = tilemap_get_at_pixel(tilemap2, (bbox_right + (bbox_left - bbox_right) / 4), bbox_bottom) & tile_index_mask;
+	if (t1 != 0 || t2 != 0 || t3 != 0 || t4 !=0 || t5 !=0 || t6 != 0 || t7 != 0){
+		y = ((bbox_bottom & ~31)-1) - sprite_bbox_bottom;
+		v_speed = 0;
+	}
+}
+refresh -= 1;
+//HORIZONTAL MOVE
+//collision mask 
 x += hsp;
-if (hsp > 0) { //right
+if (hsp > 0) { //right - collision mask
 	var t1 = tilemap_get_at_pixel(tilemap, bbox_right, bbox_top) & tile_index_mask;
 	var t2 = tilemap_get_at_pixel(tilemap, bbox_right, bbox_bottom) & tile_index_mask;
 	var t3 = tilemap_get_at_pixel(tilemap, bbox_right, (bbox_top + (bbox_bottom-bbox_top)/2)) & tile_index_mask;
+	var t4 = tilemap_get_at_pixel(tilemap, bbox_right, (bbox_top + (bbox_bottom-bbox_top)/1.5)) & tile_index_mask;
+	var t5 = tilemap_get_at_pixel(tilemap, bbox_right, (bbox_top + (bbox_bottom-bbox_top)/3)) & tile_index_mask;
+	var t6 = tilemap_get_at_pixel(tilemap, bbox_right, (bbox_top + (bbox_bottom-bbox_top)/1.25)) & tile_index_mask;
+	var t7 = tilemap_get_at_pixel(tilemap, bbox_right, (bbox_top + (bbox_bottom-bbox_top)/4)) & tile_index_mask;
 	
-	if (t1 != 0 || t2 != 0  || t3 != 0){
+	if (t1 != 0 || t2 != 0  || t3 != 0 || t4 !=0 || t5 !=0 || t6 != 0 || t7 != 0){
 		x = ((bbox_right & ~31)-1) - sprite_bbox_right;
 	}
-} else { //left
+} else { //left - collision mask
 	var t1 = tilemap_get_at_pixel(tilemap, bbox_left, bbox_top) & tile_index_mask;
 	var t2 = tilemap_get_at_pixel(tilemap, bbox_left, bbox_bottom) & tile_index_mask;
 	var t3 = tilemap_get_at_pixel(tilemap, bbox_left, (bbox_top + (bbox_bottom-bbox_top)/2)) & tile_index_mask;
+	var t4 = tilemap_get_at_pixel(tilemap, bbox_left, (bbox_top + (bbox_bottom-bbox_top)/1.5)) & tile_index_mask;
+	var t5 = tilemap_get_at_pixel(tilemap, bbox_left, (bbox_top + (bbox_bottom-bbox_top)/3)) & tile_index_mask;
+	var t6 = tilemap_get_at_pixel(tilemap, bbox_left, (bbox_top + (bbox_bottom-bbox_top)/1.25)) & tile_index_mask;
+	var t7 = tilemap_get_at_pixel(tilemap, bbox_left, (bbox_top + (bbox_bottom-bbox_top)/4)) & tile_index_mask;
 
-	if (t1 != 0 || t2 != 0 || t3 !=0 ){
+	if (t1 != 0 || t2 != 0 || t3 !=0 || t4 !=0 || t5 !=0 || t6 != 0 || t7 != 0){
 		x = ((bbox_left+ 32) & ~31) - sprite_bbox_left;
 	}
 }

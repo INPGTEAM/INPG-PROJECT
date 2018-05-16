@@ -191,11 +191,27 @@
             }
         },
         {
+            "Key": "cfb34282-5860-47f7-b336-9fbcaa0b699c",
+            "Value": {
+                "id": "7130affc-55e9-4351-b0c1-9a24461f0bf2",
+                "resourcePath": "tilesets\\tileset1\\tileset1.yy",
+                "resourceType": "GMTileSet"
+            }
+        },
+        {
             "Key": "d3519574-8116-4185-abbd-42f8192507ef",
             "Value": {
                 "id": "0e481b2c-34af-4bda-8845-959f3a8cfc3e",
                 "resourcePath": "views\\d3519574-8116-4185-abbd-42f8192507ef.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "dfbf0007-8610-4e12-9e80-a29d2f912a56",
+            "Value": {
+                "id": "b9776401-3859-4305-883f-421464dc6fee",
+                "resourcePath": "sprites\\sprite3\\sprite3.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
