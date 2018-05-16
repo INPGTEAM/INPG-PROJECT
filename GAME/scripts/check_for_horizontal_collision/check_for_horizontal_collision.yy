@@ -1,8 +1,8 @@
 {
-    "id": "25d0d084-f324-43a2-801e-44bc80bf7142",
+    "id": "1c4eb81e-fdde-4de7-9444-a1f11e04adc1",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "tile_collide_at_points",
+    "name": "check_for_horizontal_collision",
     "IsCompatibility": false,
     "IsDnD": false
 }

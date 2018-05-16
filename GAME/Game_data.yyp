@@ -55,10 +55,34 @@
             }
         },
         {
-            "Key": "25d0d084-f324-43a2-801e-44bc80bf7142",
+            "Key": "15bab698-8ad7-4664-8562-b21fd922543a",
             "Value": {
-                "id": "55f79eba-7683-43e9-8d6c-43605d77c4b1",
-                "resourcePath": "scripts\\tile_collide_at_points\\tile_collide_at_points.yy",
+                "id": "16f1487e-be67-46c2-a622-14cf213704c2",
+                "resourcePath": "scripts\\script2\\script2.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "1c4eb81e-fdde-4de7-9444-a1f11e04adc1",
+            "Value": {
+                "id": "ea9b77bf-8663-46f3-a439-abdb111524aa",
+                "resourcePath": "scripts\\check_for_horizontal_collision\\check_for_horizontal_collision.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "2a861578-3d3b-46fb-b516-7848fbc6e33c",
+            "Value": {
+                "id": "46ee3372-28a5-46e5-a78c-745e6b68f476",
+                "resourcePath": "scripts\\check_for_vertical_collision\\check_for_vertical_collision.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "2e793a22-c778-425f-bd1e-1ab4b610a3dc",
+            "Value": {
+                "id": "2cd0b1b1-b155-4b99-9dff-59911eb03f9f",
+                "resourcePath": "scripts\\check_for_jumping_collision\\check_for_jumping_collision.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -108,14 +132,6 @@
                 "id": "1c38d851-cd46-4e4f-8f4c-bcf6379a138f",
                 "resourcePath": "views\\6e781947-80f7-440e-bd19-d61a747761a8.yy",
                 "resourceType": "GMFolder"
-            }
-        },
-        {
-            "Key": "8cd014c2-9892-4e20-994f-ed121f13844f",
-            "Value": {
-                "id": "b5920483-b1ef-4249-82f7-068c12650ec5",
-                "resourcePath": "scripts\\move_and_contact_tiles\\move_and_contact_tiles.yy",
-                "resourceType": "GMScript"
             }
         },
         {
@@ -248,8 +264,9 @@
         }
     ],
     "script_order": [
-        "25d0d084-f324-43a2-801e-44bc80bf7142",
-        "8cd014c2-9892-4e20-994f-ed121f13844f"
+        "2a861578-3d3b-46fb-b516-7848fbc6e33c",
+        "1c4eb81e-fdde-4de7-9444-a1f11e04adc1",
+        "2e793a22-c778-425f-bd1e-1ab4b610a3dc"
     ],
     "tutorial": ""
 }

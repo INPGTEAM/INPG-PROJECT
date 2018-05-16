@@ -1,6 +1,6 @@
 /// @description Movement variables
 _spd = 8;
-_gravity = 1.2;
+_gravity = 1.3;
 jump_speed = 26;
 v_speed =0;
 
@@ -18,7 +18,3 @@ sprite_bbox_left = sprite_get_bbox_left(sprite_index) - sprite_get_xoffset(sprit
 sprite_bbox_right = sprite_get_bbox_right(sprite_index) - sprite_get_xoffset(sprite_index);
 sprite_bbox_bottom = sprite_get_bbox_bottom(sprite_index) - sprite_get_yoffset(sprite_index);
 sprite_bbox_top = sprite_get_bbox_top(sprite_index) - sprite_get_yoffset(sprite_index);
-
-/*_velocity = [0, 0];
-max_velocity_ = [8, 32];
-acceleration = 2.5;*/ 

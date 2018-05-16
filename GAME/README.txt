@@ -21,3 +21,8 @@ Dodano grafikê przedstawiaj¹c¹ jak MNIEJ WIÊCEJ wygl¹da mapa do platformówki ora
 1.2 ~Lukasz
 Dodane p³ytki przepuszczaj¹ce w jedn¹ stronê, oraz dodano punkty sprawdzaj¹ce styk z mapê. 
 Obiekt teraz mo¿e byæ nawet 4 razy wiêkszy, na razie powinno wystarczyæ. 
+
+1.3 ~Lukasz
+Usprawniono mapê kolizyjn¹ oraz p³ytki jednostronne, mapa powinna dzia³aæ dla wiêkszoœci stosunków wielkoœci obiekt/p³ytka. 
+Zmieniono funkcjê sprawdzaj¹ce kolizjê, dodano je do skryptów. Mo¿na je wyko¿ystaæ dla innych obiektów. 
+Jeszcze nie sprawdza³em, jakby ktoœ mia³ ochotê na testy to œmia³o.

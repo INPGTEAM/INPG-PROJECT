@@ -1,8 +1,8 @@
 {
-    "id": "8cd014c2-9892-4e20-994f-ed121f13844f",
+    "id": "56131638-4e9c-4858-b1cd-9a2ffb736fd7",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "move_and_contact_tiles",
+    "name": "check_for_vertical_collision",
     "IsCompatibility": false,
     "IsDnD": false
 }
