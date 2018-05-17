@@ -3,6 +3,10 @@ _spd = 8;
 _gravity = 1.3;
 jump_speed = 26;
 v_speed =0;
+_dash = 10;
+_dashrf = 0;
+_facing = 1;
+_teste = 0;
 
 // Get the tile map id
 var layer_id = layer_get_id("CollisionTiles");

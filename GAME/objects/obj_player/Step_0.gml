@@ -22,8 +22,11 @@ if (t1 !=0){
 }
 jump_ref -= 1;
 // geting the input
-var hsp = (keyboard_check(vk_right) - keyboard_check(vk_left)) * _spd;
+var _direction = (keyboard_check(vk_right) - keyboard_check(vk_left));
+var hsp = _direction * _spd;
 var vsp = v_speed;
+var dsh = keyboard_check(vk_shift);
+if (_direction != 0) _facing = _direction;
 v_speed += _gravity;
 
 y += vsp;
@@ -54,13 +57,15 @@ if (vsp > 0 && refresh <= 0) { // downowards - one way tiles mask
 refresh -= 1;
 //HORIZONTAL MOVE
 //collision mask 
+x = x+ dsh * _dash* _facing;
 x += hsp;
-if (hsp > 0) { //right - collision mask
+if (hsp > 0 || dsh != 0) { //right - collision mask
 	var t1 = check_for_horizontal_collision(tilemap, 0);
 	if (t1 != 0){
 		x = ((bbox_right & ~31)-1) - sprite_bbox_right;
 	}
-} else { //left - collision mask
+} 
+if (hsp <= 0 || dsh != 0) { //left - collision mask
 	var t1 = check_for_horizontal_collision(tilemap, 1);
 
 	if (t1 != 0){
