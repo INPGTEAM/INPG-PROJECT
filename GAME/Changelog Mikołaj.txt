@@ -1,0 +1,4 @@
+1.1
+Dodano prototypy przeciwników (prototyp 1, e^x)
+Dodano opcjê strzelania dx' ami (e^x niewra¿liwe)
+ 
