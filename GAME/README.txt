@@ -1,4 +1,4 @@
-Na tym pliku dzialamy.
+﻿Na tym pliku dzialamy.
 Prosze abyscie pisali co zmieniacie/ dodajecie.
 Zasady:
 Jeśli zmiany te są tylko kosmetyczne to nie musicie tego robic.
@@ -26,3 +26,7 @@ Obiekt teraz może być nawet 4 razy większy, na razie powinno wystarczyć.
 Usprawniono mapę kolizyjną oraz płytki jednostronne, mapa powinna działać dla większości stosunków wielkości obiekt/płytka. 
 Zmieniono funkcję sprawdzające kolizję, dodano je do skryptów. Można je wykorzystać dla innych obiektów. 
 Jeszcze nie sprawdzałem, jakby ktoś miał ochotę na testy to śmiało.
+ 
+1.4 ~Lukasz 
+Dodano podwójny skok, słabnący z 2 skokiem. Dopracowany dash, dłuższy i wolniejszy, ale działający tylko na podłożu oraz blink- krótszy oraz szybszy
+działający tylko w powietrzu(działa tylko 1 na skok). 
