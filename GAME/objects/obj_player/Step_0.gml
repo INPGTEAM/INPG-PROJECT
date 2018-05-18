@@ -72,3 +72,13 @@ if (hsp <= 0 || dsh != 0) { //left - collision mask
 		x = ((bbox_left+ 32) & ~31) - sprite_bbox_left;
 	}
 }
+
+
+//Shooting
+if mouse_check_button(mb_left) && (cooldown<1)
+{
+	instance_create_layer(x,y, "Instances", obj_bullet_dx);
+	cooldown = 7;
+}
+
+cooldown = cooldown -1;

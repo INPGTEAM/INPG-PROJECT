@@ -8,6 +8,8 @@ _dashrf = 0;
 _facing = 1;
 _teste = 0;
 
+cooldown=0;
+
 // Get the tile map id
 var layer_id = layer_get_id("CollisionTiles");
 _collision_tile_map_id = layer_tilemap_get_id(layer_id);
