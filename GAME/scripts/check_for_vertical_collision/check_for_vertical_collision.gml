@@ -25,3 +25,4 @@ if (variant == 1) {
 	}
 	return 0;
 }
+//return 0 if there is no collision

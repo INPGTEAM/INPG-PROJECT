@@ -1,17 +1,6 @@
 /// @description Movement logic
-// geting the input
 
-//FIRST TYPE
 
-// jumping
-// for collision mask
-var t1 = check_for_jumping_collision(tilemap);
-if (t1 !=0){
-	if (keyboard_check(vk_up)) {
-		v_speed = (-jump_speed);
-		jump_ref = 20
-	}
-}
 //for one way tiles
 var t1 = check_for_jumping_collision(tilemap2);
 if (t1 !=0){
@@ -28,6 +17,30 @@ var vsp = v_speed;
 var dsh = keyboard_check(vk_shift);
 if (_direction != 0) _facing = _direction;
 v_speed += _gravity;
+// jumping
+// for collision mask
+var t2 = check_for_horizontal_collision(tilemap,0);
+if (t2 !=0) blink_max = 1;
+var t1 = check_for_jumping_collision(tilemap);
+if (t1 !=0 ){
+	on_ground = true;
+	_jumps = 1;
+	blink_max =1;
+} else {
+	on_ground = false;
+}
+
+if (on_ground== true) {
+	if(keyboard_check(vk_up)){
+		v_speed = (-jump_speed);
+	}
+}
+if (on_ground == false && _jumps >0){
+	if(keyboard_check_pressed(vk_up)){
+		v_speed = (-jump_speed)*2/3;
+		_jumps -=1;
+	}
+}
 
 y += vsp;
 // VERTICAL
@@ -57,7 +70,6 @@ if (vsp > 0 && refresh <= 0) { // downowards - one way tiles mask
 refresh -= 1;
 //HORIZONTAL MOVE
 //collision mask 
-x = x+ dsh * _dash* _facing;
 x += hsp;
 if (hsp > 0 || dsh != 0) { //right - collision mask
 	var t1 = check_for_horizontal_collision(tilemap, 0);
@@ -82,3 +94,50 @@ if mouse_check_button(mb_left) && (cooldown<1)
 }
 
 cooldown = cooldown -1;
+//dash
+if(on_ground == true){
+	if(keyboard_check_pressed(vk_shift)) dash_timeleft=9;
+	if (dash_timeleft > 0){
+		hsp = 0;
+		x = x+  _dash* _facing;
+		if (_facing >0) { //right - collision mask
+		var t1 = check_for_horizontal_collision(tilemap, 0);
+		if (t1 != 0){
+			x = ((bbox_right & ~31)-1) - sprite_bbox_right;
+			}
+		} 
+		if (_facing < 0) { //left - collision mask
+			var t1 = check_for_horizontal_collision(tilemap, 1);
+			if (t1 != 0){
+				x = ((bbox_left+ 32) & ~31) - sprite_bbox_left;
+			}
+		}
+	}	
+}
+dash_timeleft = dash_timeleft -1;
+
+//blink
+if(on_ground == false && blink_max > 0){
+	if(keyboard_check_pressed(vk_shift)){
+		blink_timeleft=4;
+	}
+	if (blink_timeleft > 0){
+		hsp = 0;
+		vsp = 0;
+		x = x+  _blink* _facing;
+		if (_facing >0) { //right - collision mask
+		var t1 = check_for_horizontal_collision(tilemap, 0);
+		if (t1 != 0){
+			x = ((bbox_right & ~31)-1) - sprite_bbox_right;
+			}
+		} 
+		if (_facing < 0) { //left - collision mask
+			var t1 = check_for_horizontal_collision(tilemap, 1);
+			if (t1 != 0){
+				x = ((bbox_left+ 32) & ~31) - sprite_bbox_left;
+			}
+		}
+		if(blink_timeleft == 1) blink_max -= 1;
+	}
+}
+blink_timeleft -=1;
