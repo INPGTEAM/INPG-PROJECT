@@ -1,4 +1,5 @@
-﻿Na tym pliku dzialamy.
+﻿ZAPRASZAM DO TESTOWANIA I ZGŁASZANIA PROBLEMÓW. 
+Na tym pliku dzialamy.
 Prosze abyscie pisali co zmieniacie/ dodajecie.
 Zasady:
 Jeśli zmiany te są tylko kosmetyczne to nie musicie tego robic.
