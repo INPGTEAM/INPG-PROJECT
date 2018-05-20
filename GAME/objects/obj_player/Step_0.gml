@@ -42,11 +42,11 @@ if (on_ground == false && _jumps >0){
 		_jumps -=1;
 	}
 }
-var t1 = test_one(tilemap);
-var t2 = test_two(tilemap)
+/*var t1 = test_one(tilemap);
+var t2 = test_two(tilemap);
 if (t1 !=0 || t2 != 0){
 	hsp = 0;
-}
+}*/
 // VERTICAL
 //collision mask
 y += vsp;
@@ -85,7 +85,7 @@ if(on_ground == true){
 		if (_facing >0) { //right - collision mask
 		var t1 = check_for_horizontal_collision(tilemap, 0);
 		if (t1 != 0){
-			x = ((bbox_right & ~15)-1) - sprite_bbox_right;
+			x = ((bbox_right & ~15)-2) - sprite_bbox_right;
 			}
 		} 
 		if (_facing < 0) { //left - collision mask
@@ -99,24 +99,26 @@ if(on_ground == true){
 }
 dash_timeleft = dash_timeleft -1;
 //move
+hsp = _direction * _spd;
+x += hsp;
 if (_direction > 0 ) { //right - collision mask
-	var t1 = test_two(tilemap);
+	var t1 = check_for_horizontal_collision(tilemap,0);
 	if (t1 != 0){
 		hsp = 0;
 		x = bbox_right & ~(15);
-		x -= bbox_right-x ;
+		x -= bbox_right-x+2 ;
 	}
-} else hsp = _direction * _spd;
+} 
 if (_direction < 0) { //left - collision mask
-	var t1 = test_one(tilemap);
+	var t1 = check_for_horizontal_collision(tilemap,1);
 
 	if(t1 != 0){
 		hsp =0;
 		x = bbox_left & ~(15);
-		x += 16+x-bbox_left -1;
+		x += 16+x-bbox_left +2;
 	}
-} else hsp = _direction * _spd;
-x += hsp;
+}
+
 
 //Shooting
 if mouse_check_button(mb_left) && (cooldown<1)
