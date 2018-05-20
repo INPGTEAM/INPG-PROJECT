@@ -1,15 +1,15 @@
 /// @description Movement variables
-_spd = 8;
-_gravity = 1.3;
-jump_speed = 24;
+_spd = 3;
+_gravity = 0.8;
+jump_speed = 8;
 v_speed =0;
-_dash = 20;
+_dash = 5;
 _dashrf = 0;
 _facing = 1;
 on_ground = true;
 _jumps =0;
 dash_timeleft =0;
-_blink = 30;
+_blink = 18;
 blink_timeleft =0;
 blink_max =1;
 

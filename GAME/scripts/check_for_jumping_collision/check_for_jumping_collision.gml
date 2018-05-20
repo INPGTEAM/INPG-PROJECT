@@ -11,3 +11,4 @@ for(var i = 1.1; i < 10; i = i+0.1){
 	if (sum != 0) return 1;
 }
 return 0;
+
