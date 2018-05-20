@@ -16,6 +16,8 @@ var hsp ;
 var vsp = v_speed;
 var dsh = keyboard_check(vk_shift);
 if (_direction != 0) _facing = _direction;
+if (_facing >=0) sprite_index = s_p_right;
+if (_facing <0) sprite_index = s_p_left;
 v_speed += _gravity;
 // jumping
 // for collision mask
@@ -42,18 +44,14 @@ if (on_ground == false && _jumps >0){
 		_jumps -=1;
 	}
 }
-/*var t1 = test_one(tilemap);
-var t2 = test_two(tilemap);
-if (t1 !=0 || t2 != 0){
-	hsp = 0;
-}*/
+
 // VERTICAL
 //collision mask
 y += vsp;
 if (vsp > 0) { // downowards - collision mask
 	var t1 = check_for_vertical_collision(tilemap, 0);
 	if (t1 != 0){
-		y = ((bbox_bottom & ~15)-1) - sprite_bbox_bottom;
+		y = ((bbox_bottom & ~15)-1) - sprite_bbox_bottom  ;
 		v_speed = 0;
 	}
 } else { //upwards - collision mask
@@ -85,7 +83,7 @@ if(on_ground == true){
 		if (_facing >0) { //right - collision mask
 		var t1 = check_for_horizontal_collision(tilemap, 0);
 		if (t1 != 0){
-			x = ((bbox_right & ~15)-2) - sprite_bbox_right;
+			x = ((bbox_right & ~15)-3) - sprite_bbox_right;
 			}
 		} 
 		if (_facing < 0) { //left - collision mask
@@ -105,8 +103,8 @@ if (_direction > 0 ) { //right - collision mask
 	var t1 = check_for_horizontal_collision(tilemap,0);
 	if (t1 != 0){
 		hsp = 0;
-		x = bbox_right & ~(15);
-		x -= bbox_right-x+2 ;
+		x = (bbox_right) & ~(15);
+		x -= bbox_right-x+3 ;
 	}
 } 
 if (_direction < 0) { //left - collision mask
