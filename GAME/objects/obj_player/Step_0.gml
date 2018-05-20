@@ -4,6 +4,7 @@
 //for one way tiles
 var t1 = check_for_jumping_collision(tilemap2);
 if (t1 !=0){
+	v_speed =0;
 	if (keyboard_check(vk_up) && jump_ref <=0) {
 		v_speed = (-jump_speed);
 		jump_ref = 20;
@@ -31,7 +32,7 @@ if (t1 !=0 ){
 } else {
 	on_ground = false;
 }
-
+//ff
 if (on_ground== true) {
 	v_speed = 0;
 	if(keyboard_check(vk_up)){
@@ -66,8 +67,8 @@ if(keyboard_check(vk_down)) refresh = 5;
 if (vsp > 0 && refresh <= 0) { // downowards - one way tiles mask
 	var t1 = check_for_vertical_collision(tilemap2, 0);
 	if (t1 != 0){
-		y = ((bbox_bottom & ~15)-1) - sprite_bbox_bottom;
-		v_speed = 0;
+		y = ((bbox_bottom & ~15)-1) - sprite_bbox_bottom  ;
+		_jumps = 1;
 	}
 }
 refresh -= 1;
@@ -129,18 +130,18 @@ cooldown = cooldown -1;
 
 
 //blink
-/*if(on_ground == false && blink_max > 0){
+if(on_ground == false && blink_max > 0){
 	if(keyboard_check_pressed(vk_shift)){
-		blink_timeleft=4;
+		blink_timeleft=8;
 	}
 	if (blink_timeleft > 0){
 		hsp = 0;
-		vsp = 0;
+		v_speed = 0;
 		x = x+  _blink* _facing;
 		if (_facing >0) { //right - collision mask
 		var t1 = check_for_horizontal_collision(tilemap, 0);
 		if (t1 != 0){
-			x = ((bbox_right & ~15)-1) - sprite_bbox_right;
+			x = ((bbox_right & ~15)-3) - sprite_bbox_right;
 			}
 		} 
 		if (_facing < 0) { //left - collision mask
@@ -152,4 +153,4 @@ cooldown = cooldown -1;
 		if(blink_timeleft == 1) blink_max -= 1;
 	}
 }
-blink_timeleft -=1; */
+blink_timeleft -=1; 
