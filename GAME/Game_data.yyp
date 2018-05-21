@@ -103,6 +103,14 @@
             }
         },
         {
+            "Key": "32e60093-1760-41c7-a1de-e78a5c23ecc8",
+            "Value": {
+                "id": "dd2175d9-9439-49bc-9ab2-b6afc5c7207b",
+                "resourcePath": "sprites\\spr_attack\\spr_attack.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "34882fc2-e48e-43e6-94bd-ac453e155233",
             "Value": {
                 "id": "52ed3843-ea6f-48e6-918e-f46260ef8c7b",
@@ -127,6 +135,14 @@
             }
         },
         {
+            "Key": "494f3efb-03cd-4d33-973f-9fbb914c62d4",
+            "Value": {
+                "id": "fc8ab77e-8b99-4467-bb6c-0df578bce85e",
+                "resourcePath": "sprites\\spr_bullet_dy\\spr_bullet_dy.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "4f99d4a8-935f-43c9-9fb5-4f0d3caaafab",
             "Value": {
                 "id": "6e0b28c2-b32e-44ce-b226-4906fe672661",
@@ -148,6 +164,22 @@
                 "id": "1c38d851-cd46-4e4f-8f4c-bcf6379a138f",
                 "resourcePath": "views\\6e781947-80f7-440e-bd19-d61a747761a8.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "7582c073-c5d2-4959-a916-fa4e05014503",
+            "Value": {
+                "id": "94e89b5e-7596-4835-99af-9d0a538a25e2",
+                "resourcePath": "sprites\\spr_attack_hitbox\\spr_attack_hitbox.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "7b41a8a3-4de8-404c-a0cd-230b8223ccb0",
+            "Value": {
+                "id": "dcc1053d-9ad9-4945-a486-ac120e7ee43a",
+                "resourcePath": "objects\\obj_attack_hitbox\\obj_attack_hitbox.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -252,6 +284,14 @@
                 "id": "7fd87776-4297-413d-a96b-07be629ddc33",
                 "resourcePath": "views\\bbfb8793-5848-42ba-a736-361bac3ee780.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "c1de4e8d-00f3-43b2-a77e-c74703fdcfb8",
+            "Value": {
+                "id": "d52a65d3-3017-4114-9961-391be6b07d0d",
+                "resourcePath": "objects\\obj_bullet_dy\\obj_bullet_dy.yy",
+                "resourceType": "GMObject"
             }
         },
         {

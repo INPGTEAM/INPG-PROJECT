@@ -1,4 +1,4 @@
-/// @description Movement logic
+/// @description Movement logic and attacking
 
 
 //for one way tiles
@@ -123,7 +123,8 @@ if (_direction < 0) { //left - collision mask
 if mouse_check_button(mb_left) && (cooldown<1)
 {
 	instance_create_layer(x,y, "Instances", obj_bullet_dx);
-	cooldown = 7;
+	cooldown = 10;
+
 }
 
 cooldown = cooldown -1;
@@ -154,3 +155,29 @@ if(on_ground == false && blink_max > 0){
 	}
 }
 blink_timeleft -=1; 
+
+//Melee attack
+
+if mouse_check_button(mb_right)
+{
+	sprite_index=spr_attack;
+	image_speed=1;
+	
+	if(image_index>10)&&(image_index<15)
+	{
+		with(instance_create_layer(x,y,"Instances",obj_attack_hitbox))
+		{
+			image_xscale=other.image_xscale;
+			with(instance_place(x,y,obj_enemy_prototype1))
+			{
+				if(hit==0)
+				{
+					hit=1;
+					vsp=-3;
+					hsp=sign(x-other.x)*4;
+					image_xscale=sign(hsp);
+				}
+			}
+		}
+	}
+}

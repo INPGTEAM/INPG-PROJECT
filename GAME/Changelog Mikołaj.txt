@@ -2,3 +2,6 @@
 Dodano prototypy przeciwników (prototyp 1, e^x)
 Dodano opcjê strzelania dx' ami (e^x niewra¿liwe)
  
+1.2
+Obiekt  bullet dy
+Dodano melee attack (no idea why the animation aint working)

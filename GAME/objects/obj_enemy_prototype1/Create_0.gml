@@ -9,6 +9,7 @@ _gravity = 1.3;
 _hsp = 0;
 v_speed = 0;
 _dash = 10;
+hit=0;
 // Get the tile map id
 var layer_id = layer_get_id("CollisionTiles");
 _collision_tile_map_id = layer_tilemap_get_id(layer_id);

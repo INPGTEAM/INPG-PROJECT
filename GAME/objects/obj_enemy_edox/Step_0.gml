@@ -44,3 +44,7 @@ if (hsp > 0) { //right - collision mask
 //TRRRIGGGERRED MODE
 
 if (hp<=10) sprite_index = spr_triggered1;
+
+//Dyin
+
+if(hp<=0) instance_destroy();
