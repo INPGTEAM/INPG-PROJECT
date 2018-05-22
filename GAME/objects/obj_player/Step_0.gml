@@ -17,8 +17,11 @@ var hsp ;
 var vsp = v_speed;
 var dsh = keyboard_check(vk_shift);
 if (_direction != 0) _facing = _direction;
-if (_facing >=0) sprite_index = s_p_right;
-if (_facing <0) sprite_index = s_p_left;
+
+//=======Zmiana sprita bez spr_left i spr_right
+image_xscale=sign(_facing);
+
+
 v_speed += _gravity;
 // jumping
 // for collision mask
@@ -156,28 +159,6 @@ if(on_ground == false && blink_max > 0){
 }
 blink_timeleft -=1; 
 
-//Melee attack
 
-if mouse_check_button(mb_right)
-{
-	sprite_index=spr_attack;
-	image_speed=1;
-	
-	if(image_index>10)&&(image_index<15)
-	{
-		with(instance_create_layer(x,y,"Instances",obj_attack_hitbox))
-		{
-			image_xscale=other.image_xscale;
-			with(instance_place(x,y,obj_enemy_prototype1))
-			{
-				if(hit==0)
-				{
-					hit=1;
-					vsp=-3;
-					hsp=sign(x-other.x)*4;
-					image_xscale=sign(hsp);
-				}
-			}
-		}
-	}
-}
+
+

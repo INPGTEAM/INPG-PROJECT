@@ -5,3 +5,7 @@ Dodano opcjê strzelania dx' ami (e^x niewra¿liwe)
 1.2
 Obiekt  bullet dy
 Dodano melee attack (no idea why the animation aint working)
+
+1.3
+Zmiana logiki zmiany sprita przy zmianie kierunku lewy-prawy (zmiane osi x obrazka)
+Naprawa problemu animacji ataku

@@ -45,4 +45,9 @@ if (hsp > 0) { //right - collision mask
 if hp<=0 instance_destroy();
 
 //TRRRIGGGERRED MODE
-if (hp<=4) sprite_index = spr_triggered1;
+if (hp<=5) sprite_index = spr_triggered1;
+
+if(v_speed==0)
+{
+	hit=0;
+}	
