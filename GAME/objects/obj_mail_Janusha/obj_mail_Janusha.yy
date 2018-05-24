@@ -1,19 +1,10 @@
 {
-    "id": "e22b87d5-2018-4bb3-9a1e-fcfe9d0b475f",
+    "id": "f8e74025-03aa-4675-8da5-73881f266df8",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "object7",
+    "name": "obj_mail_Janusha",
     "eventList": [
-        {
-            "id": "3e13e683-8f2e-4af3-b933-21a8ca3be2e6",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "cb77c160-12e1-4985-9f47-b5fe23925e6f",
-            "enumb": 0,
-            "eventtype": 4,
-            "m_owner": "e22b87d5-2018-4bb3-9a1e-fcfe9d0b475f"
-        }
+        
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
@@ -33,6 +24,6 @@
     "physicsStartAwake": true,
     "properties": null,
     "solid": false,
-    "spriteId": "00000000-0000-0000-0000-000000000000",
+    "spriteId": "b8e29070-0aa4-418d-95d0-01f8f09d94bc",
     "visible": true
 }

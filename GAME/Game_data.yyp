@@ -39,6 +39,14 @@
             }
         },
         {
+            "Key": "0890cfed-4b5d-4f3f-8334-1dd1cafe10cb",
+            "Value": {
+                "id": "479a6851-05fd-411c-8a6d-3877d6baa450",
+                "resourcePath": "views\\0890cfed-4b5d-4f3f-8334-1dd1cafe10cb.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "0c69f5c3-5c70-4965-89c8-c7b188d43ac2",
             "Value": {
                 "id": "a2f79aa4-22b4-473a-9b42-e55333942d7d",
@@ -76,6 +84,14 @@
                 "id": "0c3f165b-5cbd-4e19-ac6a-6d73fe3aba8e",
                 "resourcePath": "sprites\\spr_triggered1\\spr_triggered1.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "1c229345-4bdc-425d-a0d3-9866f53ba1b2",
+            "Value": {
+                "id": "514ca9f2-b818-4343-8d20-ce6dfa682bcd",
+                "resourcePath": "views\\1c229345-4bdc-425d-a0d3-9866f53ba1b2.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -143,6 +159,14 @@
             }
         },
         {
+            "Key": "40ab5076-5bca-4d75-9c6a-9122c0fbdaa6",
+            "Value": {
+                "id": "4f6182b6-c262-49f6-90ae-f4759d0cec13",
+                "resourcePath": "views\\40ab5076-5bca-4d75-9c6a-9122c0fbdaa6.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "494f3efb-03cd-4d33-973f-9fbb914c62d4",
             "Value": {
                 "id": "fc8ab77e-8b99-4467-bb6c-0df578bce85e",
@@ -159,6 +183,14 @@
             }
         },
         {
+            "Key": "51c60d4e-c46c-4f38-ab0d-bc33e398c345",
+            "Value": {
+                "id": "1a9c3126-5991-4a39-8b06-d803aa92e5dd",
+                "resourcePath": "views\\51c60d4e-c46c-4f38-ab0d-bc33e398c345.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "51f2ec4b-e4f7-4fdc-991e-e751998cbcc1",
             "Value": {
                 "id": "bbd57840-dbbf-4283-9426-8f59838742d2",
@@ -172,6 +204,14 @@
                 "id": "a9dd45d1-af01-4859-80e8-4fface8ad494",
                 "resourcePath": "views\\54ffc2e8-c230-463c-b0b5-3741535ad280.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "5b25a2c3-9d2f-40f7-80d4-45e985aab8ea",
+            "Value": {
+                "id": "5bc68140-3996-43db-b3a2-fa5a7af43fcd",
+                "resourcePath": "sprites\\spr_gornik\\spr_gornik.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -299,6 +339,14 @@
             "Value": {
                 "id": "40245bdf-2b42-4a06-83fa-3d81aed22e12",
                 "resourcePath": "sprites\\s_p_left\\s_p_left.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "b8e29070-0aa4-418d-95d0-01f8f09d94bc",
+            "Value": {
+                "id": "37a7b825-ac1b-42bf-9c64-88bcb64ddfb1",
+                "resourcePath": "sprites\\spr_mail_Janusha\\spr_mail_Janusha.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -439,6 +487,14 @@
             }
         },
         {
+            "Key": "f73a3604-158b-4e44-8122-76d397511c2d",
+            "Value": {
+                "id": "fb760892-6518-4176-9e8b-81fe31603746",
+                "resourcePath": "views\\f73a3604-158b-4e44-8122-76d397511c2d.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "f8563e2f-62ea-4aff-b494-ae6f0134384f",
             "Value": {
                 "id": "0d5b265f-61cc-41b6-9490-04ba805959a3",
@@ -447,11 +503,11 @@
             }
         },
         {
-            "Key": "f910922e-9526-4ff5-8732-4d34c3733cbf",
+            "Key": "f8e74025-03aa-4675-8da5-73881f266df8",
             "Value": {
-                "id": "d8badb54-dda0-49a9-9c1d-afa24b5361ef",
-                "resourcePath": "sprites\\spr_triggered\\spr_triggered.yy",
-                "resourceType": "GMSprite"
+                "id": "74c31262-53b1-416c-9571-4d88574d1408",
+                "resourcePath": "objects\\obj_mail_Janusha\\obj_mail_Janusha.yy",
+                "resourceType": "GMObject"
             }
         }
     ],
