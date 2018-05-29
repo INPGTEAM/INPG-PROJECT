@@ -167,6 +167,14 @@
             }
         },
         {
+            "Key": "419a2a86-1fc6-4b5f-80f9-f5611834f842",
+            "Value": {
+                "id": "110ad8dc-4c4d-4943-9a48-2857d4501314",
+                "resourcePath": "objects\\object10\\object10.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "494f3efb-03cd-4d33-973f-9fbb914c62d4",
             "Value": {
                 "id": "fc8ab77e-8b99-4467-bb6c-0df578bce85e",
@@ -266,7 +274,7 @@
             "Key": "89d7efcc-cb4a-47f1-a8c4-300f25463c1f",
             "Value": {
                 "id": "d7034f8f-e93f-4a77-8244-ebf431198dcf",
-                "resourcePath": "sprites\\sprite15\\sprite15.yy",
+                "resourcePath": "sprites\\ziemia\\ziemia.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -364,6 +372,14 @@
                 "id": "7fd87776-4297-413d-a96b-07be629ddc33",
                 "resourcePath": "views\\bbfb8793-5848-42ba-a736-361bac3ee780.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "be1d4005-62e7-4a28-9c42-1be19db94f43",
+            "Value": {
+                "id": "10d4cdbe-f9ec-49b1-874b-3c5ce5c50eff",
+                "resourcePath": "objects\\camerasa\\camerasa.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -476,6 +492,14 @@
                 "id": "5467c625-67a5-42ac-9483-089d591236ff",
                 "resourcePath": "rooms\\r_temoporary\\r_temoporary.yy",
                 "resourceType": "GMRoom"
+            }
+        },
+        {
+            "Key": "eb979c4e-29be-4d7f-bccd-a97a0b89e927",
+            "Value": {
+                "id": "f352f47f-e183-4868-81bd-31a4c828c2da",
+                "resourcePath": "objects\\trawazziemia\\trawazziemia.yy",
+                "resourceType": "GMObject"
             }
         },
         {
