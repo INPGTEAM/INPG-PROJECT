@@ -41,11 +41,11 @@ if (hsp > 0) { //right - collision mask
 	}
 }
 
-//Dying
-if hp<=0 instance_destroy();
+var _direction = sign(hsp)
 
+if (_direction != 0) _facing = _direction;
+image_xscale=sign(_facing);
 
-if(v_speed==0)
-{
-	hit=0;
-}	
+//Dyin
+
+if(hp<=0) instance_destroy();
