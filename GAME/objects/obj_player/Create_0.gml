@@ -12,8 +12,9 @@ dash_timeleft =0;
 _blink = 5;
 blink_timeleft =0;
 blink_max =1;
-
+atack_time=0;
 cooldown=0;
+atack_facing=1;
 
 // Get the tile map id
 var layer_id = layer_get_id("CollisionTiles");

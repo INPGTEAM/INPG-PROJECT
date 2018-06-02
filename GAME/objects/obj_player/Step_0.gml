@@ -1,6 +1,5 @@
 /// @description Movement logic and attacking
 
-
 //for one way tiles
 var t1 = check_for_jumping_collision(tilemap2);
 if (t1 !=0){
@@ -17,9 +16,29 @@ var hsp ;
 var vsp = v_speed;
 var dsh = keyboard_check(vk_shift);
 if (_direction != 0) _facing = _direction;
+hsp = _direction * _spd;
+image_xscale=sign(_facing);
 
 //=======Zmiana sprita bez spr_left i spr_right
-image_xscale=sign(_facing);
+/*if(keyboard_check(vk_alt)){
+		if(sprite_index != spr_attack){
+			sprite_index = spr_attack;
+			image_xscale=sign(_facing);
+			hsp =0;
+			if(image_index>12)&&(image_index<14)
+			{
+				with(instance_create_layer(x,y,"Instances",obj_attack_hitbox))
+				{
+				image_xscale=other.image_xscale;
+			
+				}
+			}
+	
+		}
+}else {
+	if (_facing >=0) sprite_index = s_p_right;
+    if (_facing <0) sprite_index = s_p_left;
+}*/
 
 
 v_speed += _gravity;
@@ -101,14 +120,46 @@ if(on_ground == true){
 }
 dash_timeleft = dash_timeleft -1;
 //move
-hsp = _direction * _spd;
+if (keyboard_check(vk_right)||keyboard_check(vk_left)||hsp!=0)
+{
+	if (on_ground ==true){
+		sprite_index = spr_run;
+		image_speed=1;
+	} else sprite_index = s_p_right;
+} 
+
+if(keyboard_check_released(vk_right)||keyboard_check_released(vk_left)) sprite_index=s_p_right;
+if (keyboard_check_pressed(vk_space)) 
+{	atack_time = 20;
+	atack_facing=_facing;
+}
+if(atack_time >1)
+{
+	_facing =atack_facing; 
+	hsp =0;
+	sprite_index=spr_attack;
+	image_xscale=sign(_facing);
+	
+	image_speed=2;
+	if(image_index>12)&&(image_index<14)
+	{
+		with(instance_create_layer(x,y,"Instances",obj_attack_hitbox))
+		{
+			image_xscale=other.image_xscale;
+			
+		}
+	}
+} 
+if (atack_time == 1) sprite_index=s_p_right;
+atack_time -=1;
 x += hsp;
 if (_direction > 0 ) { //right - collision mask
 	var t1 = check_for_horizontal_collision(tilemap,0);
 	if (t1 != 0){
 		hsp = 0;
+		sprite_index=s_p_right;
 		x = (bbox_right) & ~(15);
-		x -= bbox_right-x+3 ;
+		x -= bbox_right-x+2 ;
 	}
 } 
 if (_direction < 0) { //left - collision mask
@@ -116,11 +167,11 @@ if (_direction < 0) { //left - collision mask
 
 	if(t1 != 0){
 		hsp =0;
+		sprite_index=s_p_right;
 		x = bbox_left & ~(15);
 		x += 16+x-bbox_left +2;
 	}
 }
-
 
 //Shooting
 if mouse_check_button(mb_left) && (cooldown<1)

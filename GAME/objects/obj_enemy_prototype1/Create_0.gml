@@ -1,7 +1,7 @@
 /// @description Variables
 //Variables init
 
-hp = 10;
+hp = 2;
 hit=0;
 dir = -1;
 _movespeed = 0.5;
