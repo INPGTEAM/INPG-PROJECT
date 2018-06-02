@@ -30,3 +30,6 @@ Jeszcze nie sprawdzałem, jakby ktoś miał ochotę na testy to śmiało.
 1.4 ~Lukasz 
 Dodano podwójny skok, słabnący z 2 skokiem. Dopracowany dash, dłuższy i wolniejszy, ale działający tylko na podłożu oraz blink- krótszy oraz szybszy
 działający tylko w powietrzu(działa tylko 1 na skok). 
+
+1.5 ~Lukasz
+Dodano trochę animacji, beta biegu, poprawiono troszkę bugów związanych ze zmianami spritów a płytkami kolizyjnymi.
