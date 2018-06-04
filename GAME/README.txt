@@ -33,3 +33,6 @@ działający tylko w powietrzu(działa tylko 1 na skok).
 
 1.5 ~Lukasz
 Dodano trochę animacji, beta biegu, poprawiono troszkę bugów związanych ze zmianami spritów a płytkami kolizyjnymi.
+
+1.6 ~Lukasz
+Dodano wersję finalną biegu, naprawiłem błąd z niewidzialnymi płytkami kolizyjnymi(zostały niewidoczne po zmianie ich sprite'a), płytki kolizyjne działają bez zarzutu.

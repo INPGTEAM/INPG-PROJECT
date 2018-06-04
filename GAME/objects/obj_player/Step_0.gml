@@ -106,13 +106,17 @@ if(on_ground == true){
 		if (_facing >0) { //right - collision mask
 		var t1 = check_for_horizontal_collision(tilemap, 0);
 		if (t1 != 0){
-			x = ((bbox_right & ~15)-3) - sprite_bbox_right;
+			//x = ((bbox_right & ~15)-3) - sprite_bbox_right;
+			x = (bbox_right) & ~(15);
+			x -= bbox_right-x+3 ;
 			}
 		} 
 		if (_facing < 0) { //left - collision mask
 			var t1 = check_for_horizontal_collision(tilemap, 1);
 			if (t1 != 0){
-				x = ((bbox_left+ 16) & ~15) - sprite_bbox_left;
+				//x = ((bbox_left+ 16) & ~15) - sprite_bbox_left;
+				x = bbox_left & ~(15);
+				x += 16+x-bbox_left +2;
 			}
 		}
 	}
@@ -159,7 +163,7 @@ if (_direction > 0 ) { //right - collision mask
 		hsp = 0;
 		sprite_index=s_p_right;
 		x = (bbox_right) & ~(15);
-		x -= bbox_right-x+2 ;
+		x -= bbox_right-x+3 ;
 	}
 } 
 if (_direction < 0) { //left - collision mask
