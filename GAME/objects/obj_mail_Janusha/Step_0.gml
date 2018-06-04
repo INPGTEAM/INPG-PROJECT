@@ -3,4 +3,4 @@
 
 //Spinning
 
-image_angle+=14;
+image_angle+=3;

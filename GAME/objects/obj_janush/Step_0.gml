@@ -49,3 +49,15 @@ if(v_speed==0)
 {
 	hit=1;
 }		
+
+
+//shooting
+
+if (cooldown<1)
+{
+	instance_create_layer(obj_janush.x,obj_janush.y, "Instances", obj_mail_Janusha);
+	cooldown = 69;
+
+}
+
+cooldown = cooldown -1;
