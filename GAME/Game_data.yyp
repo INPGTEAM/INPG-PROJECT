@@ -247,6 +247,14 @@
             }
         },
         {
+            "Key": "640d52ad-4315-4bf7-a667-07c56720467c",
+            "Value": {
+                "id": "bea5a7ec-a31d-4674-847a-d7d10e9c4f72",
+                "resourcePath": "objects\\better_janus\\better_janus.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "6e781947-80f7-440e-bd19-d61a747761a8",
             "Value": {
                 "id": "1c38d851-cd46-4e4f-8f4c-bcf6379a138f",
@@ -492,6 +500,14 @@
                 "id": "b9776401-3859-4305-883f-421464dc6fee",
                 "resourcePath": "sprites\\sprite3\\sprite3.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "e49912f5-0e2d-42e4-a321-1db57679f46c",
+            "Value": {
+                "id": "ab059c5f-c6ee-4ecc-af4a-1cc479294b9c",
+                "resourcePath": "objects\\obj_mail_Janusha1\\obj_mail_Janusha1.yy",
+                "resourceType": "GMObject"
             }
         },
         {
