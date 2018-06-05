@@ -375,6 +375,14 @@
             }
         },
         {
+            "Key": "a9d2b9fe-759f-413b-8dab-44c137abb8f5",
+            "Value": {
+                "id": "d0a15af6-9318-4a00-a1da-a193ce9e0e50",
+                "resourcePath": "objects\\obj__mina\\obj__mina.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "aa9f5cd2-a1d3-4485-bc8a-d55d4632fa52",
             "Value": {
                 "id": "d5bdf20e-f639-4676-868c-dcfaf2c7e718",
