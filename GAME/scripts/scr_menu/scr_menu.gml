@@ -7,12 +7,17 @@ switch(mpos)
 	}
 	case 1:
 	{
+		room_goto(ains);
 		break;
 	}
 	case 2:
 	{
-		game_end();
+		
 		break;
+	}
+	case 3:
+	{
+		game_end();
 	}
 	default: break;
 	
