@@ -200,7 +200,15 @@ if mouse_check_button(mb_left) && (cooldown<1)
 }
 
 cooldown = cooldown -1;
+//Shootigg2
+if mouse_check_button(mb_right) && (cooldown<1)
+{
+	instance_create_layer(x,y, "Instances", obj_bulletdormineor);
+	cooldown = 10;
 
+}
+
+cooldown = cooldown -1;
 
 //blink
 if(on_ground == false && blink_max > 0){

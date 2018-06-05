@@ -503,6 +503,14 @@
             }
         },
         {
+            "Key": "daa8479c-b5f6-4868-91a1-e7d309f288aa",
+            "Value": {
+                "id": "785925fc-24ad-424b-87d4-675a10fa3e59",
+                "resourcePath": "objects\\obj_bulletdormineor\\obj_bulletdormineor.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "dfbf0007-8610-4e12-9e80-a29d2f912a56",
             "Value": {
                 "id": "b9776401-3859-4305-883f-421464dc6fee",
