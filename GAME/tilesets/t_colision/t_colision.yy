@@ -14,19 +14,17 @@
             
         ]
     },
-    "out_columns": 2,
+    "out_columns": 1,
     "out_tilehborder": 2,
     "out_tilevborder": 2,
-    "spriteId": "b7a2b1e0-119c-440e-8614-bfe9c087bd89",
+    "spriteId": "4f99d4a8-935f-43c9-9fb5-4f0d3caaafab",
     "sprite_no_export": true,
     "textureGroupId": "1225f6b0-ac20-43bd-a82e-be73fa0b6f4f",
     "tile_animation": {
         "AnimationCreationOrder": null,
         "FrameData": [
             0,
-            1,
-            2,
-            3
+            1
         ],
         "SerialiseFrameCount": 1
     },
@@ -34,7 +32,7 @@
         
     ],
     "tile_animation_speed": 15,
-    "tile_count": 4,
+    "tile_count": 2,
     "tileheight": 16,
     "tilehsep": 0,
     "tilevsep": 0,
