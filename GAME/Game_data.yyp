@@ -207,6 +207,14 @@
             }
         },
         {
+            "Key": "5494cb81-4464-4b81-b883-9955b2914ed2",
+            "Value": {
+                "id": "2fbd981a-dd2d-4620-848b-e8c59a07d530",
+                "resourcePath": "sprites\\jump_up\\jump_up.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "54ffc2e8-c230-463c-b0b5-3741535ad280",
             "Value": {
                 "id": "a9dd45d1-af01-4859-80e8-4fface8ad494",

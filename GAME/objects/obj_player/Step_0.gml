@@ -59,6 +59,7 @@ if (on_ground== true) {
 	v_speed = 0;
 	if(keyboard_check(vk_up)){
 		v_speed = (-jump_speed);
+		sprite_index=jump_up;
 	}
 }
 if (on_ground == false && _jumps >0){
@@ -75,6 +76,7 @@ if (vsp > 0) { // downowards - collision mask
 	var t1 = check_for_vertical_collision(tilemap, 0);
 	if (t1 != 0){
 		y = ((bbox_bottom & ~15)-1) - sprite_bbox_bottom  ;
+		sprite_index=s_p_right;
 		v_speed = 0;
 	}
 } else { //upwards - collision mask
@@ -106,17 +108,17 @@ if(on_ground == true){
 		if (_facing >0) { //right - collision mask
 		var t1 = check_for_horizontal_collision(tilemap, 0);
 		if (t1 != 0){
-			//x = ((bbox_right & ~15)-3) - sprite_bbox_right;
-			x = (bbox_right) & ~(15);
-			x -= bbox_right-x+3 ;
+			x = ((bbox_right & ~15)-2) - sprite_bbox_right;
+			//x = (bbox_right) & ~(15);
+			//x -= bbox_right-x+3 ;
 			}
 		} 
 		if (_facing < 0) { //left - collision mask
 			var t1 = check_for_horizontal_collision(tilemap, 1);
 			if (t1 != 0){
-				//x = ((bbox_left+ 16) & ~15) - sprite_bbox_left;
-				x = bbox_left & ~(15);
-				x += 16+x-bbox_left +2;
+				x = ((bbox_left+ 16) & ~15) - sprite_bbox_left;
+				//x = bbox_left & ~(15);
+				//x += 16+x-bbox_left +2;
 			}
 		}
 	}
@@ -126,10 +128,10 @@ dash_timeleft = dash_timeleft -1;
 //move
 if (keyboard_check(vk_right)||keyboard_check(vk_left)||hsp!=0)
 {
-	if (on_ground ==true){
+	if (on_ground ==true && vsp==0){
 		sprite_index = spr_run;
 		image_speed=1;
-	} else sprite_index = s_p_right;
+	} 
 } 
 
 if(keyboard_check_released(vk_right)||keyboard_check_released(vk_left)) sprite_index=s_p_right;
@@ -173,7 +175,7 @@ if (_direction < 0) { //left - collision mask
 		hsp =0;
 		sprite_index=s_p_right;
 		x = bbox_left & ~(15);
-		x += 16+x-bbox_left +2;
+		x += 16+x-bbox_left+2 ;
 	}
 }
 
