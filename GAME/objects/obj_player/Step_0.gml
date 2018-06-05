@@ -1,15 +1,14 @@
 /// @description Movement logic and attacking
 
 //for one way tiles
-var t1 = check_for_jumping_collision(tilemap2);
+/*var t1 = check_for_jumping_collision(tilemap2);
 if (t1 !=0){
 	v_speed =0;
 	if (keyboard_check(vk_up) && jump_ref <=0) {
 		v_speed = (-jump_speed);
 		jump_ref = 20;
 	}
-}
-jump_ref -= 1;
+}*/
 // geting the input
 var _direction = (keyboard_check(vk_right) - keyboard_check(vk_left));
 var hsp ;
@@ -40,8 +39,17 @@ image_xscale=sign(_facing);
     if (_facing <0) sprite_index = s_p_left;
 }*/
 
+if (v_speed >= 8){
+	var f = for_long_falling(tilemap,0);
+	if (f != 0){
+		y = ((bbox_bottom & ~15)-1) - sprite_bbox_bottom  ;
+		v_speed = 0;
+		if(sprite_index==jump_up) sprite_index=s_p_right;
+	}
+}
 
 v_speed += _gravity;
+
 // jumping
 // for collision mask
 var t2 = check_for_horizontal_collision(tilemap,0);
@@ -88,14 +96,14 @@ if (vsp > 0) { // downowards - collision mask
 	}
 }
 //one way tiles mask
-if(keyboard_check(vk_down)) refresh = 5;
+/*if(keyboard_check(vk_down)) refresh = 5;
 if (vsp > 0 && refresh <= 0) { // downowards - one way tiles mask
 	var t1 = check_for_vertical_collision(tilemap2, 0);
 	if (t1 != 0){
 		y = ((bbox_bottom & ~15)-1) - sprite_bbox_bottom  ;
 		_jumps = 1;
 	}
-}
+}*/
 refresh -= 1;
 //if (vsp !=0) sprite_index=jump_up;
 

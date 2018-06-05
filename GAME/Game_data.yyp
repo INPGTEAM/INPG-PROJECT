@@ -359,6 +359,14 @@
             }
         },
         {
+            "Key": "aa9f5cd2-a1d3-4485-bc8a-d55d4632fa52",
+            "Value": {
+                "id": "d5bdf20e-f639-4676-868c-dcfaf2c7e718",
+                "resourcePath": "scripts\\for_long_falling\\for_long_falling.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "b7a2b1e0-119c-440e-8614-bfe9c087bd89",
             "Value": {
                 "id": "c246e84c-f8f0-473b-9fc7-ed6826239b7a",
@@ -556,7 +564,8 @@
         "1c4eb81e-fdde-4de7-9444-a1f11e04adc1",
         "2e793a22-c778-425f-bd1e-1ab4b610a3dc",
         "cad44673-af8d-4549-bd20-b372f56cd233",
-        "732c1720-5ad8-4a03-a8f3-ec1a6683c550"
+        "732c1720-5ad8-4a03-a8f3-ec1a6683c550",
+        "aa9f5cd2-a1d3-4485-bc8a-d55d4632fa52"
     ],
     "tutorial": ""
 }
