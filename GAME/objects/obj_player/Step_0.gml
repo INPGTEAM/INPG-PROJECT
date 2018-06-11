@@ -136,14 +136,15 @@ if(on_ground == true){
 }
 dash_timeleft = dash_timeleft -1;
 //move
-if (keyboard_check(vk_right)||keyboard_check(vk_left)||hsp!=0)
-{
-	if (on_ground ==true && vsp==0){
-		sprite_index = spr_run;
-		image_speed=1;
+if(sprite_index != spr_attack){
+	if (keyboard_check(vk_right)||keyboard_check(vk_left)||hsp!=0)
+	{
+		if (on_ground ==true && vsp==0){
+			sprite_index = spr_run;
+			image_speed=1;
+		} 
 	} 
-} 
-
+}
 if(keyboard_check_released(vk_right)||keyboard_check_released(vk_left)) sprite_index=s_p_right;
 if (keyboard_check_pressed(vk_space)) 
 {	atack_time = 20;
